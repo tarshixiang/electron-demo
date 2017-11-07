@@ -1,4 +1,4 @@
-const {app, BrowserWindow} = require('electron');
+const { app, BrowserWindow } = require('electron');
 const path = require('path');
 const url = require('url');
 
@@ -11,11 +11,11 @@ const createWindow = () => {
     });
 
     const URL = url.format({
-        pathname : path.join(__dirname, 'index.html'),
+        pathname: path.join(__dirname, 'index.html'),
         protocol: 'file:',
-        slashes : true
+        slashes: true
     });
-    console.log(URL,'======')
+    console.log(URL, '======')
     win.loadURL(URL);
 
     win.webContents.openDevTools();
@@ -28,13 +28,13 @@ const createWindow = () => {
 app.on('ready', createWindow);
 
 app.on('window-all-close', () => {
-    if(process.platform != 'darwin'){
+    if (process.platform != 'darwin') {
         app.quit();
     }
 })
 
 app.on('activate', () => {
-    if(win === null ){
+    if (win === null) {
         createWindow();
     }
 })
