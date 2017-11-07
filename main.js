@@ -28,11 +28,14 @@ function createWindow () {
     win = null
   });
 
-  require('./main-process/menu.js');
-  require('./main-process/msg-a.js');
-  require('./main-process/tray.js');
-
+  // require('./main-process/menu.js');
+  // require('./main-process/msg-a.js');
+  // require('./main-process/tray.js');
+  // require('./main-process/dialog.js');
 }
+
+require('./main-process/shortcut.js');
+
 
 // Electron 会在初始化后并准备
 // 创建浏览器窗口时，调用这个函数。

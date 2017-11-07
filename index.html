@@ -11,16 +11,19 @@
     <button id="menu">menu click</button>
     <button id="msg_a">msg click</button>
     <button id="new-win">new win</button>
+    <a href="https://www.baidu.com">a link</a>
     <br>
     We are using node <script>document.write(process.versions.node)</script>,
     Chrome <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>.
 
     <script>
-      require('./renderer-process/open.js');
-      require('./renderer-process/menu.js');
-      require('./renderer-process/msg-b.js');
-      require('./renderer-process/new-win.js');
+      // require('./renderer-process/open.js');
+      // require('./renderer-process/menu.js');
+      // require('./renderer-process/msg-b.js');
+      // require('./renderer-process/new-win.js');
+      // require('./renderer-process/notification.js');
+      require('./renderer-process/link.js');
     </script>
   </body>
 </html>
