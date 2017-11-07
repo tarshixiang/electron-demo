@@ -1,18 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>App</title>
-</head>
-<body>
-    <h1>hello world</h1>
-    <p>node version</p>
-    <script> document.write(process.versions.node) </script>
-    <p>chrome version</p>
-    <script> document.write(process.versions.chrome) </script>
-    <p>electron version</p>
-    <script> document.write(process.versions.electron) </script>
-</body>
+    <title>Hello World!</title>
+  </head>
+  <body>
+    <h1>Hello World!</h1>
+
+    <button id="click">click me</button>
+    <button id="menu">menu click</button>
+    <button id="msg_a">msg click</button>
+    <button id="new-win">new win</button>
+    <br>
+    We are using node <script>document.write(process.versions.node)</script>,
+    Chrome <script>document.write(process.versions.chrome)</script>,
+    and Electron <script>document.write(process.versions.electron)</script>.
+
+    <script>
+      require('./renderer-process/open.js');
+      require('./renderer-process/menu.js');
+      require('./renderer-process/msg-b.js');
+      require('./renderer-process/new-win.js');
+    </script>
+  </body>
 </html>
