@@ -1,7 +1,7 @@
 const {app, BrowserWindow} = require('electron');
 const path = require('path');
 const url = require('url');
-
+const pdf = require('./main-process/pdf.js').pdf;
 // 保持一个对于 window 对象的全局引用，如果你不这样做，
 // 当 JavaScript 对象被垃圾回收， window 会被自动地关闭
 let win;
@@ -32,6 +32,8 @@ function createWindow () {
   // require('./main-process/msg-a.js');
   // require('./main-process/tray.js');
   // require('./main-process/dialog.js');
+
+  pdf(win);
 }
 
 // require('./main-process/shortcut.js');
