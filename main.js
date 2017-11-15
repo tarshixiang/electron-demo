@@ -33,7 +33,7 @@ function createWindow () {
   // require('./main-process/tray.js');
   // require('./main-process/dialog.js');
 
-  pdf(win);
+  // pdf(win);
 }
 
 // require('./main-process/shortcut.js');
