@@ -8,7 +8,7 @@ let win;
 
 function createWindow () {
   // 创建浏览器窗口。
-  win = new BrowserWindow({width: 800, height: 600})
+  win = new BrowserWindow({width: 800, height: 600 })
 
   // 加载应用的 index.html。
   win.loadURL(url.format({
@@ -34,7 +34,7 @@ function createWindow () {
   // require('./main-process/dialog.js');
 }
 
-require('./main-process/shortcut.js');
+// require('./main-process/shortcut.js');
 
 
 // Electron 会在初始化后并准备
